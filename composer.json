@@ -1,0 +1,51 @@
+{
+    "name": "liteas98/core-component-repository",
+    "description": "My awesome package",
+    "keywords": [
+        "liteas98",
+        "core-component-repository"
+    ],
+    "authors": [
+        {
+            "name": "Mostafa Eid",
+            "email": "lost.mostafa92@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.81"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "scrutinizer/ocular": "^1.8",
+        "satooshi/php-coveralls": "^1.0",
+        "mockery/mockery": "^1.5",
+        "phpspec/phpspec": "^7.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Liteas98\\CoreComponentRepository\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liteas98\\CoreComponentRepository\\CoreComponentRepositoryServiceProvider"
+            ],
+            "aliases": {
+                "CoreComponentRepository": "Liteas98\\CoreComponentRepository\\CoreComponentRepositoryFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
